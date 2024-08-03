@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="249dp"
+        android:layout_height="97dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvNombreArchivo"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre del Archivo"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewLink"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vinculo del Archivo"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnDescargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descargar"
+        android:textSize="16sp" />
+
+
+
+</LinearLayout>
