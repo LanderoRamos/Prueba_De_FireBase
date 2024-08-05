@@ -4,10 +4,10 @@
     <!-- Permisos necesarios para Firebase -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Acceso a internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"
         tools:ignore="ScopedStorage" />
-
 
     <application
         android:allowBackup="true"
@@ -19,6 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaDeFireBase"
         tools:targetApi="31">
+        <activity
+            android:name=".FileManagementActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".FileManagementActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".LoginSqlActivity"
+            android:exported="false" />
         <activity
             android:name=".FileManagementActivity"
             android:exported="false" />
@@ -33,7 +42,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -52,16 +52,16 @@ public class ArchivoAdapter extends RecyclerView.Adapter<ArchivoAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Archivo archivo = archivos.get(position);
         holder.tvNombreArchivo.setText(archivo.getNombre());
-        holder.link.setText(archivo.getUrlDescarga());
-        holder.link.setMovementMethod(LinkMovementMethod.getInstance());
-        holder.link.setText(Html.fromHtml("<a href='"+archivo.getUrlDescarga()+"'>"+archivo.getNombre()+"</a>"));
+        //holder.link.setText(archivo.getUrlDescarga());
+        //holder.link.setMovementMethod(LinkMovementMethod.getInstance());
+        //holder.link.setText(Html.fromHtml("<a href='"+archivo.getUrlDescarga()+"'>"+archivo.getNombre()+"</a>"));
 
 
-        holder.btnDescargar.setOnClickListener(v -> {
+        /*holder.btnDescargar.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onItemClick(position);
             }
-        });
+        });*/
     }
 
     @Override
@@ -77,13 +77,13 @@ public class ArchivoAdapter extends RecyclerView.Adapter<ArchivoAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNombreArchivo = itemView.findViewById(R.id.tvNombreArchivo);
-            btnDescargar = itemView.findViewById(R.id.btnDescargar);
+            //btnDescargar = itemView.findViewById(R.id.btnDescargar);
             link = itemView.findViewById(R.id.textViewLink);
         }
     }
 
     public void descargarArchivo(String nombreArchivo, String urlDescarga) {
-        StorageReference storageRef = storage.getReferenceFromUrl(urlDescarga);
+        /*StorageReference storageRef = storage.getReferenceFromUrl(urlDescarga);
 
         // Crear una referencia local en la carpeta de descargas
         File localFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), nombreArchivo);
@@ -95,6 +95,8 @@ public class ArchivoAdapter extends RecyclerView.Adapter<ArchivoAdapter.ViewHold
         }).addOnFailureListener(exception -> {
             // Error al descargar archivo
             Toast.makeText(context, "Error al descargar archivo: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
-        });
+        });*/
+
+
     }
 }

@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // Login exitoso, usuario autenticado
                         Toast.makeText(LoginActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, FileManagementActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, FileManagementActivity3.class);
                         startActivity(intent);
                         finish();
                         // Aquí podrías redirigir a otra actividad si lo deseas

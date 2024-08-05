@@ -1,6 +1,7 @@
 package com.example.pruebadefirebase;
 
 public class Archivo {
+    private String id;
     private String nombre;
     private String urlDescarga;
 
@@ -8,9 +9,18 @@ public class Archivo {
         // Constructor vacío requerido por Firebase Database
     }
 
-    public Archivo(String nombre, String urlDescarga) {
+    public Archivo(String nombre, String urlDescarga ) {
         this.nombre = nombre;
         this.urlDescarga = urlDescarga;
+
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {
